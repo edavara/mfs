@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Welcome to my website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Welcome to my website</h1>
+      </header>
+      <main>
+        <img id="background-image" alt="Random Image" />
+        <p>
+          My name is [name], and I'm a 32-year-old digital nomad living in Tenerife. I specialize in digital marketing, and I'm passionate about helping businesses grow and reach their full potential.
+        </p>
+      </main>
+    </div>
+
+    <script>
+      const digitalMarketingImages = [
+        "https://images.pexels.com/photos/327540/pexels-photo-327540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/605607/pexels-photo-605607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/317885/pexels-photo-317885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      ];
+
+      const tenerifeImages = [
+        "https://images.pexels.com/photos/6293466/pexels-photo-6293466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/7773455/pexels-photo-7773455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/3854650/pexels-photo-3854650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/327540/pexels-photo-327540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+      ];
+
+      const backgroundImage = document.getElementById("background-image");
+
+      function randomIndex(array) {
+        return Math.floor(Math.random() * array.length);
+      }
+
+      function setBackground() {
+        backgroundImage.src = digitalMarketingImages[randomIndex(digitalMarketingImages)];
+      }
+
+      setBackground();
+    </script>
+  </body>
+</html>
